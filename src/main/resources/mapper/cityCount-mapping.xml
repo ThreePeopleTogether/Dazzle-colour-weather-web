@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.K8lyN.dao.CityCountMapper">
+
+    <insert id="insertCity" parameterType="com.K8lyN.model.CityCount">
+        insert into citycount(cityName,count) values(#{cityName},#{count})
+    </insert>
+
+    <delete id="deleteCity">
+        delete from citycount where cityName=#{cityName};
+    </delete>
+
+    <update id="updateCity" parameterType="com.K8lyN.model.CityCount">
+        update citycount set cityName=#{cityName}, count=#{count} where cityName=#{cityName};
+    </update>
+
+    <select id="selectCity" resultType="com.K8lyN.model.CityCount">
+        select id, cityName, count from citycount where cityName = #{name};
+    </select>
+
+    <select id="getCities" resultType="com.K8lyN.model.CityCount">
+        select * from citycount;
+    </select>
+
+    <select id="getNum" resultType="int">
+        select count(*) from citycount;
+    </select>
+
+    <select id="getMax" parameterType="int" resultType="com.K8lyN.model.CityCount">
+        select * from citycount a order by a.count desc limit #{num};
+    </select>
+
+</mapper>

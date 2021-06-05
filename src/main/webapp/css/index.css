@@ -1,0 +1,282 @@
+/* 初始化样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.actual_air_quality_number {
+    color: white;
+    font-size: 10px;
+    padding-top: 2px;
+    text-align: center;
+}
+
+/* head区域 */
+header {
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+header p {
+    margin-left: 12px;
+    line-height: 45px;
+}
+
+.content {
+    width: 100%;
+}
+
+.content h4 {
+    margin: 12px;
+}
+
+/* 当日气温 */
+
+.intraday_temperature_content {
+    margin: 0 12px;
+}
+
+.intraday_temperature {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    background-color: rgb(113, 171, 238);
+    border-radius: 15px;
+}
+
+.intraday_temperature p {
+    color: white;
+    text-align: center;
+}
+
+.intraday_temperature_header {
+    width: 80%;
+    padding-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    justify-items: start;
+}
+
+.intraday_temperature_header h3 {
+    float: left;
+    color: white;
+}
+
+.intraday_temperature_header p {
+    float: left;
+    color: white;
+    font-size: 14px;
+}
+
+.intraday_temperature_body {
+    width: 210px;
+    height: 50px;
+    padding-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intraday_temperature_body h2 {
+    float: left;
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.temperature {
+    float: left;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.temperature img,
+.temperature p {
+    float: left;
+}
+
+.temperature p {
+    color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* 实况其他天气细节信息 */
+.intraday_temperature_other {
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.intraday_temperature_other ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    padding: 0;
+}
+
+.intraday_temperature_other ul li {
+    height: 100px;
+    align-items: center;
+}
+
+.intraday_temperature_other ul li img {
+    width: 100%;
+    height: 32px;
+}
+
+.intraday_temperature_other ul li p {
+    text-align: center;
+}
+
+.intraday_temperature_other ul li p:last-child {
+    color: #8a8a8a;
+    font-size: 13px;
+}
+
+/* 逐小时预报 */
+.hour_temperature_content {
+    display: inline-block;
+    overflow: scroll;
+    width: 100%;
+    margin-top: 15px;
+    z-index: 2;
+    padding: 0;
+}
+
+.hour_temperature_content::-webkit-scrollbar {
+    display: none;
+}
+
+.hour_temperature {
+    width: 390%;
+    height: 330px;
+}
+
+/* 15日气温 */
+.fifteenDays_layout {
+    display: inline-block;
+    overflow: scroll;
+    width: 100%;
+    z-index: 2;
+    padding: 0;
+}
+
+.fifteenDays_layout::-webkit-scrollbar {
+    display: none;
+}
+
+.fifteenDays_temperature {
+    width: 260%;
+    height: 350px;
+}
+
+/* 生活指数 */
+.life_index {
+    width: 100%;
+    height: 160px;
+}
+
+.life_index ul {
+    padding: 0;
+    margin-left: 12px;
+}
+
+.life_index ul li {
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr 1fr;
+    column-gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+    height: 30px;
+}
+
+/* 空气质量实况 */
+.actual_air_quality_content {
+    margin: 0 12px;
+}
+
+.actual_air_quality {
+    width: 100%;
+    height: 200px;
+    background: cornflowerblue;
+    border-radius: 15px;
+}
+
+.actual_air_quality h4 {
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.actual_air_quality h5 {
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 26px;
+}
+
+.actual_air_quality p {
+    color: white;
+    text-align: center;
+}
+
+.actual_air_quality ul {
+    display: grid;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.actual_air_quality ul li {
+    height: 40px;
+    border-left: 1px solid #ccc;
+}
+
+.actual_air_quality ul li:nth-child(1) {
+    border-left: none;
+}
+
+/* 空气质量预报 */
+
+.forecast_air_quality_content {
+    display: inline-block;
+    overflow: scroll;
+    z-index: 2;
+    padding: 0;
+    width: 100%;
+}
+
+.forecast_air_quality_content::-webkit-scrollbar {
+    display: none;
+}
+
+.forecast_air_quality {
+    width: 160%;
+    height: 330px;
+}
+
+/* 底部区域 */
+.footer {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.footerContent {
+    width: 100%;
+    height: 30px;
+    padding-top: 15px;
+    text-align: center;
+}

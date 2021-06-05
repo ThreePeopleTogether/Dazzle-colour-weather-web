@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫彩天气</title>
+    <link rel="shortcut icon" href="icon/app.png"/>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="static/jquery/jquery.min.js"></script>
+    <script src="static/echarts/echarts.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部标题 -->
+    <header>
+        <p id="city">天气详情</p>
+    </header>
+    <div class="content">
+        <!-- 当日气温 -->
+        <div class="intraday_temperature_content">
+            <div class="intraday_temperature">
+                <div class="intraday_temperature_header">
+                    <p>观测时间：</p>
+                    <p id="hourTime"></p>
+                </div>
+                <div class="intraday_temperature_body">
+                    <h2 id="nowTemperature"></h2>
+                    <div class="temperature">
+                        <img src="icon/cloud.svg" id="weatherIcon" style="width: 36px; height: 36px;">
+                        <p id="weatherName"></p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 实况其他天气细节信息 -->
+        <div class="intraday_temperature_other">
+            <ul>
+                <li>
+                    <img src="icon/cloud_li.svg" alt="">
+                    <p id="cloudCover"></p>
+                    <p>云量</p>
+                </li>
+                <li>
+                    <img src="icon/windy.svg" alt="">
+                    <p id="windDirection"></p>
+                    <p>风向</p>
+                </li>
+                <li>
+                    <img src="icon/humidity.svg" alt="">
+                    <p id="humidity"></p>
+                    <p>湿度</p>
+                </li>
+                <li>
+                    <img src="icon/vis.svg" alt="">
+                    <p id="visibility"></p>
+                    <p>能见度</p>
+                </li>
+                <li>
+                    <img src="icon/windy_speed.svg" alt="">
+                    <p id="windSpeed"></p>
+                    <p>风速</p>
+                </li>
+                <li>
+                    <img src="icon/feelsLike.svg" alt="">
+                    <p id="temperatureBody"></p>
+                    <p>体感温度</p>
+                </li>
+                <li>
+                    <img src="icon/pressure.svg" alt="">
+                    <p id="airPressure"></p>
+                    <p>气压</p>
+                </li>
+                <li>
+                    <img src="icon/rain.svg" alt="">
+                    <p id="precipitation"></p>
+                    <p>降水量</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 逐小时预报 -->
+        <h4>逐小时预报</h4>
+        <div class="hour_temperature_content">
+            <div class="hour_temperature" id="hour">
+
+            </div>
+        </div>
+        <!-- 15日气温 -->
+        <h4>15日预报</h4>
+        <div class="fifteenDays_layout">
+            <div class="fifteenDays_temperature" id="fifteenDays">
+
+            </div>
+        </div>
+        <!-- 生活指数 -->
+        <h4>生活指数</h4>
+        <div class="life_index">
+            <ul>
+                <li>
+                    <img src="icon/clothes.png" alt="">
+                    <p>穿衣指数</p>
+                    <p id="wearPoint"></p>
+                </li>
+                <li>
+                    <img src="icon/exercise.png" alt="">
+                    <p>运动指数</p>
+                    <p id="exercisePoint">较宜</p>
+                </li>
+                <li>
+                    <img src="icon/cold.png" alt="">
+                    <p>感冒指数</p>
+                    <p id="coldPoint">较不易</p>
+                </li>
+                <li>
+                    <img src="icon/car.png" alt="">
+                    <p>洗车指数</p>
+                    <p id="carPoint">较宜</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 空气质量实况 -->
+        <h4>空气质量实况</h4>
+        <div class="actual_air_quality_content">
+            <div class="actual_air_quality">
+                <h4>空气质量AQI</h4>
+                <h5 id="aqiData"></h5>
+                <ul>
+                    <li>
+                        <p class="actual_air_quality_number">PM10</p>
+                        <p id="PM10Data"></p>
+                    </li>
+                    <li>
+                        <p class="actual_air_quality_number">PM2.5</p>
+                        <p id="PM2p5Data"></p>
+                    </li>
+                    <li>
+                        <p class="actual_air_quality_number">NO₂</p>
+                        <p id="No2Data"></p>
+                    </li>
+                    <li>
+                        <p class="actual_air_quality_number">SO₂</p>
+                        <p id="So2Data"></p>
+                    </li>
+                    <li>
+                        <p class="actual_air_quality_number">O₃</p>
+                        <p id="O3Data"></p>
+                    </li>
+                    <li>
+                        <p class="actual_air_quality_number">CO</p>
+                        <p id="CoData"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 空气质量预报 -->
+        <h4>空气质量预报</h4>
+        <div class="forecast_air_quality_content">
+            <div class="forecast_air_quality">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部区域 -->
+    <div class="footer">
+        <div class="footerContent">
+            <img src="https://cdn.qweather.com/media/powered-by-heweather-light2.png" width="160" height="20"
+                alt="数据来自和风天气" />
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
